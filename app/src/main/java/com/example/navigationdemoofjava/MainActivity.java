@@ -2,7 +2,6 @@ package com.example.navigationdemoofjava;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
 
         navController = Navigation.findNavController(this, R.id.fragment);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph())
-                        .setDrawerLayout(drawerLayout)
+                        //.setDrawerLayout(drawerLayout)
                         .build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);//
         //initMenu();

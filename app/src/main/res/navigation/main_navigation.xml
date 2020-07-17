@@ -9,10 +9,18 @@
         android:id="@+id/bottomNavFragment"
         android:name="com.example.navigationdemoofjava.BottomFragment"
         android:label="fragment_bottom"
-        tools:layout="@layout/fragment_bottom" />
+        tools:layout="@layout/fragment_bottom" >
+        <action
+            android:id="@+id/action_bottomNavFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/infoFragment"
         android:name="com.example.navigationdemoofjava.InfoFragment"
         android:label="fragment_info"
-        tools:layout="@layout/fragment_info" />
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_infoFragment_to_bottomNavFragment"
+            app:destination="@id/bottomNavFragment" />
+    </fragment>
 </navigation>

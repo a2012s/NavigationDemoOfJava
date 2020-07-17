@@ -40,6 +40,12 @@ public class BottomFragment extends BaseFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        view.findViewById(R.id.bt_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(view).navigate(R.id.infoFragment);
+            }
+        });
         NavController navController = Navigation.findNavController(getActivity(), R.id.bottomNavFragment);
         NavigationUI.setupWithNavController(bottomNavigationView, navController);//
     }
